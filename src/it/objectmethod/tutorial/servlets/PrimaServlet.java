@@ -15,7 +15,7 @@ public class PrimaServlet extends HttpServlet {
 		
 		System.out.println("Chiamata prima servlet!!!");
 		
-		request.setAttribute("valPrimo", "Ciao sono primo");
+		request.setAttribute("valPrimo", new Integer(1234));
 		request.getRequestDispatcher("/secondo").forward(request, response);
 	}
 
