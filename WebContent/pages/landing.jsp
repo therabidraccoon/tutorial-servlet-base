@@ -10,6 +10,7 @@
 	<h1>  LANDING!!! </h1>
 	
 	<p>${valPrimo}</p>
+<%-- 	<p><% request.getAttribute("valSecondo"); %></p> --%>
 	<p>${valSecondo}</p>
 	
 </body>
