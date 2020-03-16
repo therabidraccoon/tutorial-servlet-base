@@ -20,4 +20,12 @@
 		<servlet-name>seconda</servlet-name>
 		<url-pattern>/secondo</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>it.objectmethod.tutorial.servlets.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/ciao</url-pattern>
+	</servlet-mapping>
 </web-app>
