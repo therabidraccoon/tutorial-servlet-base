@@ -1,7 +1,6 @@
 package it.objectmethod.tutorial.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,9 +21,9 @@ public class HelloServlet extends HttpServlet {
 
 //		PrintWriter out = resp.getWriter();
 //		out.write("<html><body><h1> CIAO " + nome + "!!!</h1></body></html>");
-		
+
 		req.setAttribute("nomepassato", nome);
-		req.getRequestDispatcher("pages/hello.jsp").forward(req, resp); 
+		req.getRequestDispatcher("pages/hello.jsp").forward(req, resp);
 
 	}
 
