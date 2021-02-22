@@ -26,8 +26,8 @@ public class SessionSetServlet extends HttpServlet {
 
 		String param = req.getParameter("nome");
 
-		String sessionName = (String) session.getAttribute("nome-session");
-		session.setAttribute("nome-session", param);
+		String sessionName = (String) session.getAttribute("pippo");
+		session.setAttribute("pippo", param);
 
 		if (sessionName != null) {
 			output = "Nome già presente in session : " + sessionName + ", setto nuovo nome: " + param;

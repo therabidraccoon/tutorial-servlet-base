@@ -10,30 +10,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/get-session")
-public class SessionGetServlet extends HttpServlet {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1657439038092754166L;
+@WebServlet("/test")
+public class TestSessionServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 		HttpSession session = req.getSession();
-		String output = "";
-		String sessionName = (String) session.getAttribute("pippo");
+		String nomeParam = req.getParameter("nome");
 
-		if (sessionName != null) {
-			output = "Visualizzo nome in session : " + sessionName;
-		} else {
-			output = "Nessun nome in session ";
+		String nomeSession = (String) session.getAttribute("nome-session");
+		if (nomeSession == null) {
+			nomeSession = "Nessun nome in session";
 		}
 
-		PrintWriter out = resp.getWriter();
-		out.print(output);
+		session.setAttribute("nome-session", nomeParam);
 
+		PrintWriter writer = resp.getWriter();
+		writer.write("Nome in session: " + nomeSession + "<br>Nuovo nome: " + nomeParam);
 	}
 
 }
