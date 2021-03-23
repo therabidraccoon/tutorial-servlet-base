@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import it.objectmethod.tutorial.dao.ICityDao;
 import it.objectmethod.tutorial.model.City;
 
+//ho aggiunto mapstruct
 public class CityDaoImpl implements ICityDao {
 
 	private Connection getConnection() {
